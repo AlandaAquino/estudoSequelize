@@ -62,31 +62,58 @@ const {Op} = require('sequelize');
 //     console.table(result.map(usuario => usuario.toJSON()))
 // });
 
-Usuario.findAll({
-    where:{
-       nome:{[Op.like]: '%a%'}  
-    }
-})
-.then((result) => {
-    console.table(result.map(usuario => usuario.toJSON()))
-});
+// Usuario.findAll({
+//     where:{
+//        nome:{[Op.like]: '%a%'}  
+//     }
+// })
+// .then((result) => {
+//     console.table(result.map(usuario => usuario.toJSON()))
+// });
 
-Usuario.findAll({
-    where:{
-       nome:{[Op.notLike]: '%a%'}  
-    }
-})
-.then((result) => {
-    console.table(result.map(usuario => usuario.toJSON()))
-});
+// Usuario.findAll({
+//     where:{
+//        nome:{[Op.notLike]: '%a%'}  
+//     }
+// })
+// .then((result) => {
+//     console.table(result.map(usuario => usuario.toJSON()))
+// });
 
-Comentario.findAll({
-    order: [
-        ['id', 'DESC']
-    ],
-    limit: 2,
-    offset: 0
+// Comentario.findAll({
+//     order: [
+//         ['id', 'DESC']
+//     ],
+//     limit: 2,
+//     offset: 0
+// })
+// .then((result) => {
+//     console.table(result.map(user => user.toJSON()))
+// });
+
+// Usuario.create({
+//     nome: 'Natalia',
+//     email: 'nat@digitalhouse.com',
+//     senha: 'maravilhosaaaa123'
+// }).then((resultado) => {
+//     console.log(resultado.toJSON());
+// });
+// Usuario.update({
+//     senha: 'novasenha123'
+// }, {
+//     where: {
+//         id: 8
+//     }
+// }).then((resultado) => {
+//     console.log(resultado);
+// })
+// Usuario.destroy({
+//     where: {
+//         id: 6
+//     }
+// }).then((resultado) => {
+//     console.log(resultado);
+// })
+Usuario.findAll().then((usuarios) => {
+    console.log(usuarios.map((usuario) => usuario.toJSON()));
 })
-.then((result) => {
-    console.table(result.map(user => user.toJSON()))
-});
