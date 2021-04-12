@@ -179,7 +179,12 @@ const {Op} = require('sequelize');
 //     console.table(usuario.post.map((post) => post.toJSON()));
 // });
 
-Usuario.findByPk(1, {include: ['posts']}).then(usuario => {
-    console.log(usuario.toJSON());
+// Usuario.findByPk(1, {include: ['posts']}).then(usuario => {
+//     console.log(usuario.toJSON());
+//     sequelize.close();
+// });
+
+Post.findByPk(1, {include: ['comentarios']}).then(post => {
+    console.log(post.toJSON());
     sequelize.close();
 });
