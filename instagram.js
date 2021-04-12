@@ -114,6 +114,58 @@ const {Op} = require('sequelize');
 // }).then((resultado) => {
 //     console.log(resultado);
 // })
-Usuario.findAll().then((usuarios) => {
-    console.log(usuarios.map((usuario) => usuario.toJSON()));
-})
+
+// Usuario.create({
+//     nome: 'Mylena',
+//     email: 'mylena@digitalhouse.com',
+//     senha: 'dev1234579'
+// });
+// Usuario.create({
+//     nome: 'Alanda',
+//     email: 'alanda@digitalhouse.com',
+//     senha: 'dev1234579'
+// });
+// Usuario.create({
+//     nome: 'Mateus',
+//     email: 'mateus@digitalhouse.com',
+//     senha: 'dev1234579'
+// });
+// Usuario.create({
+//     nome: 'Cecilia',
+//     email: 'cecilia@digitalhouse.com',
+//     senha: 'dev1234579'
+// });
+// Usuario.create({
+//     nome: 'K. Leticia',
+//     email: 'kleticia@digitalhouse.com',
+//     senha: 'dev1234579'
+// });
+
+// Usuario.update({
+//     email: 'sergio@digitalhouse.com'
+// }, {
+//     where: {
+//         id: 2
+//     }
+// }).then((resultado) => {
+//     console.log(resultado);
+// });
+
+// Usuario.destroy({
+//     where: {
+//         id: 3
+//     }
+// });
+
+// Post.create({
+//     texto: 'Simbora!!!',
+//     img: 'vamos.png',
+//     n_likes: 10000,
+//     usuarios_id: 7
+// });
+
+
+
+// Usuario.findAll().then((usuarios) => {
+//     console.table(usuarios.map((usuario) => usuario.toJSON()));
+// })
