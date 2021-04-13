@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
 
         //relação N:M (usuário curte vários posts)
         Post.belongsToMany(models.Usuario, {
-            as: "curtidas", //alias da relação
+            as: "curtiu", //alias da relação
             through: "curtidas", //tabela intermediária
             foreignKey: "posts_id",
             otherKey: "usuarios_id",
